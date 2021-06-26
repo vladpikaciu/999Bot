@@ -9,33 +9,22 @@ from selenium.webdriver.chrome.options import Options
 
 chrome_options = Options()
 chrome_options.add_argument("--disable-extensions")
-chrome_options.add_argument("--disable-gpu")
-chrome_options.add_argument("--headless")
+#chrome_options.add_argument("--headless")#
 
 
-PATH = "/home/vladpikaciu/PycharmProjects/chromedriver"
+PATH = "C:/Users/vladpikaciu/Desktop/999Bot-main/chromedriver.exe"
 driver = webdriver.Chrome(PATH, options=chrome_options)
-driver.get("https://999.md/ro/profile/Selenium-bot")
+driver.get("https://999.md/ro/profile/vladpikaciu")
 
-description = """Se vinde server in stare buna, pentru mai multe detalii despre hard diskuri sau altceva scrieti in privat.
-Procesor---------- 2x Intel Xeon E5-2420 (1.9 GHz-2.4GHz, 6 core 12 thread)
-Memorie---------- 16 GB DDR3 (Max 192 GB)
-Internet------------- HP Ethernet 1Gb 4-port 366i Adapter
-Gestionare la distanța------------- HP iLO (Firmware: HP iLO 4)
-Raid Controller------------- HP Dynamic Smart Array B120i Controller for SATA drives
-Alimentare-------------- 2 X 460W
-Stocare------------- 2X 500GB 7200k HDD
-Railurile sunt incluse
-
-
-Процессор---------- 2x Intel Xeon E5-2420 (1.9 GHz-2.4GHz, 6 core 12 thread)
-Оперативка---------- 16 GB DDR3 (Max 192 GB)
-Интернет------------- HP Ethernet 1Gb 4-port 366i Adapter
-Удаленное управление------------- HP iLO (Firmware: HP iLO 4)
-Рейдовый Контроллер------------- HP Dynamic Smart Array B120i Controller for SATA drives
-Питание-------------- 2 X 460W
-Хранилище------------- 2X 500GB 7200k HDD
-Рельсы входят в комплект
+description = """Se vinde server in stare buna, pentru mai multe detalii despre hard diskuri sau altceva scrieti in privat. Serverul a fost cumparat din Marea Britanie cu 5 luni in urma. Nu a fost folosit pentru mining. Se vinde din motiv ca am cumparat unul mai nou.
+Procesor................2x Intel Xeon E5-2420 (1.9 GHz-2.4GHz, 6 core 12 thread)
+Memorie.................16 GB DDR3 (Max 192 GB)
+Internet................HP Ethernet 1Gb 4-port 366i Adapter
+Gestionare la distanța..HP iLO (Firmware: HP iLO 4)
+Raid Controller.........HP Dynamic Smart Array B120i Controller for SATA drives
+Alimentare..............2 X 460W
+Stocare.................2X 500GB 7200k HDD
+Railurile sunt incluse.
 """
 
 def anunt_add():
@@ -53,8 +42,8 @@ def anunt_add():
     driver.find_element(By.ID, "control_12").send_keys("HP ProLiant DL360e Gen8")
     driver.find_element(By.ID, "control_13").send_keys(description)
     select = Select(driver.find_element_by_id("control_7"))
-    select.select_by_value("12912")
-    driver.find_element_by_id("control_2").send_keys("5900")
+    select.select_by_value("12900")
+    driver.find_element_by_id("control_2").send_keys("5100")
     select = Select(driver.find_element_by_id("control_673"))
     select.select_by_value("7369")
     select = Select(driver.find_element_by_id("control_593"))
@@ -81,13 +70,13 @@ def anunt_add():
 
     try:
         driver.find_element_by_id("fileupload-file-input").send_keys(
-            "/home/vladpikaciu/PycharmProjects/999Bot/s-l1600.jpg")
+            "C:/Users/vladpikaciu/Desktop/999Bot-main/s-l1600.jpg")
         driver.find_element_by_id("fileupload-file-input").send_keys(
-            "/home/vladpikaciu/PycharmProjects/999Bot/s-l1600 (1).jpg")
+            "C:/Users/vladpikaciu/Desktop/999Bot-main/s-l1600 (1).jpg")
         driver.find_element_by_id("fileupload-file-input").send_keys(
-            "/home/vladpikaciu/PycharmProjects/999Bot/s-l1600 (2).jpg")
+            "C:/Users/vladpikaciu/Desktop/999Bot-main/s-l1600 (2).jpg")
         driver.find_element_by_id("fileupload-file-input").send_keys(
-            "/home/vladpikaciu/PycharmProjects/999Bot/s-l1600 (4).jpg")
+            "C:/Users/vladpikaciu/Desktop/999Bot-main/s-l1600 (4).jpg")
     except:
         print("Imagini uploadate")
     sleep(2)
@@ -103,8 +92,8 @@ def login():
     nume = WebDriverWait(driver, 10).until(
         EC.presence_of_element_located((By.NAME, "password"))
     )
-    nume.send_keys("bsnHyC3L56vqxB")
-    driver.find_element(By.NAME, "login").send_keys("vlad.garbuz@alecsandri-balti.clasaviitorului.md")
+    nume.send_keys("4r&onb47^z#ep5")
+    driver.find_element(By.NAME, "login").send_keys("vladpikaciu2@gmail.com")
     driver.find_element(By.CSS_SELECTOR, ".login__form__footer__submit").click()
 
 
