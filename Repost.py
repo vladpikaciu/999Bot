@@ -92,7 +92,7 @@ def login():
     nume = WebDriverWait(driver, 10).until(
         EC.presence_of_element_located((By.NAME, "password"))
     )
-    nume.send_keys("4r&onb47^z#ep5")
+    nume.send_keys(**PASSWORD**)
     driver.find_element(By.NAME, "login").send_keys("vladpikaciu2@gmail.com")
     driver.find_element(By.CSS_SELECTOR, ".login__form__footer__submit").click()
 
