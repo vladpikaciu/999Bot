@@ -12,9 +12,9 @@ chrome_options.add_argument("--disable-extensions")
 #chrome_options.add_argument("--headless")#
 
 
-PATH = "C:/Users/vladpikaciu/Desktop/999Bot-main/chromedriver.exe"
+PATH = "C:/Users/user/Desktop/999Bot-main/chromedriver.exe"
 driver = webdriver.Chrome(PATH, options=chrome_options)
-driver.get("https://999.md/ro/profile/vladpikaciu")
+driver.get("https://999.md/ro/profile/user")
 
 description = """Se vinde server in stare buna, pentru mai multe detalii despre hard diskuri sau altceva scrieti in privat. Serverul a fost cumparat din Marea Britanie cu 5 luni in urma. Nu a fost folosit pentru mining. Se vinde din motiv ca am cumparat unul mai nou.
 Procesor................2x Intel Xeon E5-2420 (1.9 GHz-2.4GHz, 6 core 12 thread)
